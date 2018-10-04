@@ -1,0 +1,51 @@
+==================== PostgreSQL =================
+1. Schemas
+- Một cụm cơ sở dữ liệu PostgreSQL chứa một hoặc nhiều cơ sở dữ liệu có tên. Người dùng và nhóm người dùng được chia sẻ
+trên toàn bộ cụm, nhưng không có dữ liệu nào khác được chia sẻ trên cơ sở dữ liệu. Bất kỳ kết nối máy khách nào cho máy
+ chủ đều chỉ có thể truy cập dữ liệu trong một cơ sở dữ liệu duy nhất, được chỉ định trong yêu cầu kết nối.
+
+- Một cơ sở dữ liệu chứa một hoặc nhiều lược đồ được đặt tên, nó chứa các bảng. Các lược đồ cũng chứa các loại đối tượng
+ được đặt tên khác, bao gồm các kiểu dữ liệu, hàm và toán tử. Tên đối tượng tương tự có thể được sử dụng trong các
+ lược đồ khác nhau mà không có xung đột; ví dụ, cả schema1 và myschema đều có thể chứa các bảng có tên mytable.
+ Không giống như các cơ sở dữ liệu, các lược đồ không tách rời một cách cứng nhắc: người dùng có thể truy cập các
+ đối tượng trong bất kỳ lược đồ nào trong cơ sở dữ liệu mà anh ta kết nối, nếu anh ta có quyền làm như vậy.
+
+
+    CREATE SCHEMA myschema;
+    schema.table
+    database.schema.table
+
+CREATE TABLE myschema.mytable (
+ ...
+);
+DROP SCHEMA myschema;               # No content
+
+DROP SCHEMA myschema CASCADE;       # Has content
+
+
+CREATE SCHEMA schemaname AUTHORIZATION username;
+
+
+Mặc định nếu không khai báo : myschema thì lúc tạo các table nó sẽ có tên schema là: public
+
+CREATE TABLE products ( ... );
+
+CREATE TABLE public.products ( ... );
+
+
+DROP TABLE mytable;
+
+
+
+SET search_path TO myschema;     # chuyển đến database nào.
+SHOW search_path;            # đưa ra bảng và database
+
+
+2. Kế thừa
+- PostgreSQL thực hiện kế thừa bảng, có thể là một công cụ hữu ích cho các nhà thiết kế cơ sở dữ liệu.
+
+
+
+
+
+

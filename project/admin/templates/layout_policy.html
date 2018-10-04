@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="bootstrap material admin template">
+    <meta name="author" content="">
+
+    <link rel="apple-touch-icon" href=" {{ url_for('static', filename='images/admin/apple-touch-icon.png') }} " />
+    <link rel="shortcut icon" href=" {{ url_for('static', filename='images/admin/favicon.ico') }} " />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/plugins/bootstrap/bootstrap.min.css') }} " />
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/plugins/bootstrap/bootstrap-extend.min.css') }} " />
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/admin/site.css') }} " />
+
+    <!-- Plugins -->
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='vendor/animsition/animsition.css') }} " />
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='vendor/asscrollable/asScrollable.css') }} " />
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='vendor/switchery/switchery.css') }} " />
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='vendor/intro-js/introjs.css') }} " />
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='vendor/slidepanel/slidePanel.css') }} " />
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='vendor/flag-icon-css/flag-icon.css') }} " />
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='vendor/waves/waves.css') }} " />
+
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href=" {{ url_for('static', filename='fonts/material-design/material-design.min.css') }} " />
+    <link rel="stylesheet" href=" {{ url_for('static', filename='fonts/brand-icons/brand-icons.min.css') }} " />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic' />
+
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/html5shiv/html5shiv.min.js') }} "></script>
+    <![endif]-->
+
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/media-match/media.match.min.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/respond/respond.min.js') }} "></script>
+    <![endif]-->
+
+    <!-- Scripts -->
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/breakpoints/breakpoints.js') }} "></script>
+    <script>
+      Breakpoints();
+    </script>
+
+
+    <!-- If we pass through title, It will add to main title -->
+    {% if title %}
+    <title>Problem Solving Organization Admin -- {{ title }}</title>
+    {% else %}
+    <title>Problem Solving Organization Admin</title>
+    {% endif %}
+</head>
+
+<body class="animsition page-login-v2 page-register-v2 page-forgot-password layout-full page-dark">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+<!-- Page -->
+<div class="page" data-animsition-in="fade-in" data-animsition-out="fade-out">
+    <div class="page-content">
+        <div class="page-brand-info">
+            <div class="brand">
+                <img class="brand-img" src=" {{ url_for('static', filename='images/admin/logo-2x.png') }} " />
+                <h2 class="brand-text font-size-40">Remark</h2>
+            </div>
+            <p class="font-size-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <!-- This is our layout content for all page, every page will extends and override this content -->
+        {% block content %}{% endblock %}
+
+    </div>
+</div>
+<!-- End Page -->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <!-- Core  -->
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/babel-external-helpers/babel-external-helpers.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/jquery/jquery.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/popper-js/umd/popper.min.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/bootstrap-4.1.1/js/bootstrap.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/animsition/animsition.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/mousewheel/jquery.mousewheel.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/asscrollbar/jquery-asScrollbar.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/asscrollable/jquery-asScrollable.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/ashoverscroll/jquery-asHoverScroll.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/waves/waves.js') }} "></script>
+
+
+    <!-- Plugins -->
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/switchery/switchery.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/intro-js/intro.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/screenfull/screenfull.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/slidepanel/jquery-slidePanel.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='vendor/jquery-placeholder/jquery.placeholder.js') }} "></script>
+
+
+    <!-- Scripts -->
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/Component.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/Plugin.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/Base.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/Config.js') }} "></script>
+
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/Section/Menubar.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/Section/Sidebar.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/Section/PageAside.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/Plugin/menu.js') }} "></script>
+
+
+    <!-- Config -->
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/config/colors.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/config/tour.js') }} "></script>
+    <script>Config.set('assets', '../../static');</script>
+
+    <!-- Page -->
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/Site.js') }} "></script>
+
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/Plugin/asscrollable.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/Plugin/slidepanel.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/Plugin/switchery.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/Plugin/jquery-placeholder.js') }} "></script>
+    <script type="text/javascript" src=" {{ url_for('static', filename='js/admin/Plugin/material.js') }} "></script>
+
+    <script>
+      (function(document, window, $){
+        'use strict';
+
+        var Site = window.Site;
+        $(document).ready(function(){
+          Site.run();
+        });
+      })(document, window, jQuery);
+    </script>
+
+</body>
+</html>

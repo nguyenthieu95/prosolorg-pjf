@@ -224,7 +224,42 @@ Now to create new application with different Config Object we can do by:
 
 
 
+=========================================================================
+sudo apt-get install postgresql-10 pgadmin4
+
+sudo -i -u postgres
+
+psql                                                # Login to postgresql
+
+CREATE USER prosolorg WITH PASSWORD 'prosolorg';    # create new user (new role)
+
+SELECT usename FROM pg_user;                        # check create successfull or not?
+
+CREATE DATABASE flask_prosolorg_app OWNER prosolorg;# create database for app
+
+\l                                                  # check database created successfull or not ?
+
+\q                                                  # quit terminal
+
+
+source activate web
+
+conda install -c conda-forge flask-sqlalchemy
+
+conda install -c conda-forge psycopg2
+
+conda env export > environment.yml
 
 
 
 
+
+===================== Database ==========================
+Posts are an abstraction for a content types
+Categories and Tags are abstractions for taxonomies
+Users are abstractions for accounts
+
+http://flask-sqlalchemy.pocoo.org/2.3/models/
+http://flask-sqlalchemy.pocoo.org/2.3/quickstart/#quickstart
+https://codex.wordpress.org/Administration_Panels
+https://codex.wordpress.org/Database_Description#Database_Diagram
